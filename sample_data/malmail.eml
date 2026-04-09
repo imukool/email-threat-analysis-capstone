@@ -1,0 +1,61 @@
+From: "PayPal Billing" <support@secure-paypal.com>
+To: victim@example.com
+Subject: Action Required: Invoice #99431 Pending
+Date: Wed, 01 Oct 2025 12:45:00 +0530
+Message-ID: <20251001.124500.98765@secure-paypal.com>
+MIME-Version: 1.0
+Received: from unknown (HELO suspicious.host) (185.203.114.77)
+  by mail-relay.fakeisp.net with SMTP; Wed, 01 Oct 2025 07:15:00 +0000
+Received: from infected-pc (unknown [45.67.89.101])
+  by suspicious.host (Postfix) with ESMTPSA id 1234ABCD
+  for <victim@example.com>; Wed, 01 Oct 2025 07:14:50 +0000
+Received-SPF: fail (example.net: domain of support@secure-paypal.com does not designate 185.203.114.77 as permitted sender) receiver=mx1.example.net; client-ip=185.203.114.77; envelope-from=support@secure-paypal.com; helo=suspicious.host
+Authentication-Results: mx1.example.net; dkim=none; spf=fail smtp.mailfrom=support@secure-paypal.com; dmarc=fail action=quarantine header.from=secure-paypal.com
+X-Mailer: Microsoft Outlook 16.0
+X-Originating-IP: [45.67.89.101]
+Content-Type: multipart/mixed; boundary="===============BOUNDARYMALICIOUS=="
+
+--===============BOUNDARYMALICIOUS==
+Content-Type: multipart/alternative; boundary="ALT-MAL-BOUNDARY-0001"
+
+--ALT-MAL-BOUNDARY-0001
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Dear Customer,
+
+Your PayPal account has an unpaid invoice (Invoice #99431).
+Please open the attached document to review your payment status.
+Failure to act may result in account suspension.
+
+Review invoice here:
+https://paypal.com
+
+Thank you,
+PayPal Billing Support
+
+--ALT-MAL-BOUNDARY-0001
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <p><strong>Dear Customer,</strong></p>
+    <p>Your PayPal account has an unpaid invoice (<b>#99431</b>).</p>
+    <p>Please <a href="https://paypalphish.vercel.app/">click here</a> to verify payment.</p>
+    <p>Or open the attached document to review your payment status.</p>
+    <p><em>Failure to act may result in account suspension.</em></p>
+    <p>Thank you,<br/>PayPal Billing Support</p>
+  </body>
+</html>
+
+--ALT-MAL-BOUNDARY-0001--
+
+--===============BOUNDARYMALICIOUS==
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name="Invoice_99431.docx"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_99431.docx"
+
+WW91IGdvdCBIYWNrZWQ=
+
+--===============BOUNDARYMALICIOUS==--
